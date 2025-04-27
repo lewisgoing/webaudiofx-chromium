@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WebAudio Effects</title>
+  <style>
+    body { font-family: sans-serif; width: 200px; padding: 10px; }
+    label { display: block; margin: 5px 0; }
+    input[type="range"] { width: 100%; }
+    button { margin-top: 10px; padding: 5px 10px; }
+    #gainValueDisplay { font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h3>Audio Effects</h3>
+
+  <div>
+    <label for="gainSlider">Gain: <span id="gainValueDisplay">0.7</span></label>
+    <input type="range" id="gainSlider" min="0" max="1" step="0.05" value="0.7">
+  </div>
+
+  <div>
+    <label>
+      <input type="checkbox" id="reverbToggle">
+      Enable Reverb
+    </label>
+  </div>
+
+  <button id="applyEffects">Apply Effects</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

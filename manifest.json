@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Audio Effects MVP",
+  "version": "0.2",
+  "description": "Apply custom audio effects to webpage audio",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*",
+    "*://*.soundcloud.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["injected.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
